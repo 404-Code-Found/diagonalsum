@@ -1,0 +1,38 @@
+#include <stdio.h>
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    int arr[a][a];
+    for(int i=0; i<a; ++i){
+        for(int j=0; j<a; ++j){
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    for(int i=0; i<a; ++i){
+        for(int j=0; j<a; ++j){
+            printf("%d ",arr[i][j]);
+        }printf("\n");
+    }
+    int sum=0;
+    for(int i=0; i<a; ++i){
+        for(int j=0; j<a; ++j){
+            if(i==j){
+                sum+=arr[i][j];
+            }
+        }
+    }
+    int sum2=0;
+    for(int i=0; i<a; i++){
+        for(int j=a-1; j>=0; j--){
+            if(i=j){
+                sum2+=arr[i][j];
+            }
+        }
+    }
+
+    printf("SUM of left diagonal--> %d\n",sum);
+    printf("SUM of right diagonal--> %d",sum2);
+    
+    return 0;
+}
