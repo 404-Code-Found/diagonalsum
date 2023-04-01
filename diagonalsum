@@ -30,9 +30,10 @@ int main()
             }
         }
     }
-
+//printing the sum
     printf("SUM of left diagonal--> %d\n",sum);
     printf("SUM of right diagonal--> %d",sum2);
+    
     
     return 0;
 }
